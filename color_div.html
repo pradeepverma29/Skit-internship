@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 90px;
+    border: 2px solid black;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(2, 100px);
+    gap: 10px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+}
+
+.input-section {
+    display: flex;
+    gap: 10px;
+    margin-top: 90px;
+    margin-left: 80px;
+    margin-bottom: 20px;
+}
+
+input, button {
+    padding: 10px;
+    font-size: 16px;
+}
+    </style>
+</head>
+<body>
+   <div class="row">
+
+   
+    <div class="input-section">
+        <input type="text" id="colorInput" placeholder="Enter color">
+        <input type="number" id="numberInput" placeholder="Enter box number" min="1" max="8">
+        <button id="applyButton">Apply </button>
+    </div>
+    <div class="container">
+        <div class="grid">
+            <div class="box" id="1"></div>
+            <div class="box" id="2"></div>
+            <div class="box" id="3"></div>
+            <div class="box" id="4"></div>
+            <div class="box" id="5"></div>
+            <div class="box" id="6"></div>
+            <div class="box" id="7"></div>
+            <div class="box" id="8"></div>
+        </div>
+        </div>
+        </div>
+    <script>
+        document.getElementById("applyButton").onclick=function(){
+            var bgcolor=document.getElementById("colorInput").value;
+            var divId=document.getElementById("numberInput").value;
+            var targetDiv=document.getElementById(divId);
+            targetDiv.style.backgroundColor=bgcolor;
+        };
+
+    </script>
+</body>
+</html>

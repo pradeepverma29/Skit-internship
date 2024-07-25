@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .input{
+            
+          display: grid;
+          grid-template-columns: .1fr  .1fr;
+          margin-top: 20%;
+          justify-content: center;
+          height: 10vh;
+          flex-direction: column;
+          gap: 10px;
+        }
+        
+        
+        #btn{
+           margin-left: 80px;
+           width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="input">
+        <input type="text" class="inp" placeholder="Enter your Name"/>
+        <input type="text" class="inp" placeholder="Enter your Email"/>
+        <input type="text" class="inp" placeholder="Enter your age"/>
+        <input type="text" class="inp" placeholder="Enter your mobile no."/>
+        
+    
+        <button id="btn">Submit</button>
+    </div>
+    <script>
+       document.getElementById("btn").onclick=function(){
+            let val=document.getElementsByClassName("inp");
+            for(let i=0;i<val.length;i++){
+                console.log(val[i].value)
+            }
+        }
+    </script>
+</body>
+</html>

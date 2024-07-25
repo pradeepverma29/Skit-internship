@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            border: 2px solid black;
+            margin:auto;
+            margin-top: 300px;
+            background-color: white;
+        }
+        #uppercase{
+            height: 30px;
+            width: 100px;
+            align-items: center;
+            margin: 10px 10px 10px 20px;
+        }
+        #lowercase{
+            height: 30px;
+            width: 100px;
+            align-items: center;
+            margin: 10px 10px 10px 10px;
+        }
+        p{
+            text-align: left;
+            margin: 10px 10px 10px 10px;
+        }
+        #inc{
+            height: 30px;
+            width: 30px;
+            align-items: center;
+            margin: 10px 10px 10px 10px;
+        }
+        #dec{
+            height: 30px;
+            width: 30px;
+            align-items: center;
+            margin: 10px 10px 10px 10px;
+        }
+        .color{
+            height: 50px;
+            width: 50px;
+            border: 2px solid gray;
+            /* border: 200px; */
+            cursor: pointer;
+            display: inline-block;
+            border-radius: 50%;
+        }
+        #yellow{
+            margin-left: 20px;
+           background-color: yellow;
+        }
+        #red{
+            margin-left: 20px;
+            background-color: red;
+        }
+        #green{
+            margin-left: 20px;
+            background-color: green;
+        }
+        #blue{
+            margin-left: 20px;
+            background-color: blue;
+        }
+        #black{
+            margin-left: 20px;
+            background-color:black;
+        }
+        #checkbox{
+            width: 40%;
+            margin-top: 20px;
+            margin-left: 40px;
+            display: flex;
+            margin-bottom: 20px;
+            height: 30px;
+        }
+        p{
+            margin-left: 20px;
+        
+        }
+    </style>
+</head>
+<body id="bo">
+    <div class="box" id="myBox">
+        <select name="" id="checkbox">
+            <option value="none">--Make a Choice--</option>
+            <option value="react">React</option>
+            <option value="django">Django</option>
+            <option value="angular">Angular</option>
+            <option value="aws">AWS</option>
+        </select>
+
+       <div class="color" id="red"></div>
+   <div class="color" id="yellow"></div>
+   <div class="color" id="green"></div>
+   <div class="color" id="blue"></div>
+   <div class="color" id="black"></div>
+    <p id="para"></p>
+   <div class="nav">
+    <button id="uppercase">Uppercase</button>
+    <button id="lowercase">lowercase</button>
+    <button id="inc">+</button>
+    <button id="dec">-</button>
+</div>
+</div>
+<script>
+document.getElementById("checkbox").onclick=function(){
+    let domain=document.getElementById("checkbox").value;
+    if(domain=="react"){
+        document.getElementById("para").innerText="React is a free and open-source front-end JavaScript library for building user interfaces based on components by Facebook Inc. It is maintained by Meta and a community of individual developers and companies. React can be used to develop single-page, mobile, or server-rendered applications with frameworks like Next.js."
+
+    }
+    else if(domain=="django"){
+        document.getElementById("para").innerText="Django is a free and open-source, Python-based web framework that runs on a web server. It follows the model–template–views architectural pattern. It is maintained by the Django Software Foundation, an independent organization established in the US as a 501 non-profit."
+    }
+    else if(domain=="angular"){
+        document.getElementById("para").innerText="Angular is a TypeScript-based free and open-source single-page web application framework. It is developed by Google and by a community of individuals and corporations. Angular is a complete rewrite from the same team that built AngularJS. "
+    }
+    else if(domain=="aws"){
+        document.getElementById("para").innerText="Amazon Web Services, Inc. is a subsidiary of Amazon that provides on-demand cloud computing platforms and APIs to individuals, companies, and governments, on a metered, pay-as-you-go basis. Clients will often use this in combination with autoscaling. "
+    }
+    else{
+        document.getElementById("para"),innerText=""
+    }
+} 
+    document.getElementById("red").onclick=function(){
+        document.getElementById("bo").style.backgroundColor="red";
+    }
+    document.getElementById("yellow").onclick=function(){
+        document.getElementById("bo").style.backgroundColor="yellow";
+    }
+    document.getElementById("green").onclick=function(){
+        document.getElementById("bo").style.backgroundColor="green";
+    }
+    document.getElementById("blue").onclick=function(){
+        document.getElementById("bo").style.backgroundColor="blue";
+    }
+    document.getElementById("black").onclick=function(){
+        document.getElementById("bo").style.backgroundColor="black";
+    }
+
+    let counter=0;
+        document.getElementById("inc").onclick = function(){
+            document.getElementById("para").style.fontSize=counter+"px"
+            counter++;
+            console.log(counter+"px")
+        }
+        document.getElementById("dec").onclick = function(){
+            document.getElementById("para").style.fontSize=counter+"px"
+            counter--;
+            console.log(counter+"px")
+        }
+        document.getElementById("uppercase").onclick = function(){
+            document.getElementById("para").style.textTransform="uppercase"
+            console.log("uppercase")
+        }
+        document.getElementById("lowercase").onclick = function(){
+            document.getElementById("para").style.textTransform="lowercase"
+            console.log("lowercase")
+        }
+        document.getElementById("color").oninput=function(){
+        let color=document.getElementById("color").value;
+            console.log(color)
+            document.getElementById("myBox").style.backgroundColor=color;
+        }
+    </script>
+</body>
+</html>

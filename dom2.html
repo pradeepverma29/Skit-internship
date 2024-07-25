@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box1{
+            height: 50vh;
+            width: 70vh;
+            border: 2px solid black;
+            
+           
+        }
+        #box2{
+            height: 50vh;
+            width: 80vh;
+            border: 2px solid black;
+        font-style: bold;
+        font-weight: 10;
+           
+        }
+    /* .box{
+        border:  2px solid black ;
+        height: 50%;
+        width: 50%;
+        justify-content: center;
+        align-items : center;
+        
+    }
+    #up
+    {
+      text-align: center;
+      
+    } */
+</style>
+</head>
+<body>
+<textarea id="box1" rows="10" cols="20"> </textarea>
+<div id="box2"></div>
+    <!-- <div class="box" id="mybox">
+        <p id="para">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos nisi nemo consequatur tempore eveniet adipisci aliquid est. Illo deleniti facere dicta sit asperiores adipisci neque distinctio, ea dolores doloribus nobis.
+            At, a animi deserunt voluptas harum deleniti doloremque. Provident, sed illo excepturi ab quibusdam, ipsum facere dolores dignissimos iure voluptas officiis tempora consectetur totam harum voluptates doloribus ducimus debitis? Provident.
+        </p>
+        <button id="up">uppercase</button><button id="lw">lowercase</button><button id="inc">+</button><button id="dec">-</button><input type="color" id="color"><input type="range" >
+    </div> -->
+     <!-- <script>let
+         counter = 0;
+        document.getElementById("up").onclick = function(){
+            document.getElementById("para").style.textTransform = "uppercase"
+            console.log("uppercase")
+            
+        }
+        document.getElementById("lw").onclick = function(){
+            document.getElementById("para").style.textTransform = "lowercase"
+            
+        }
+       
+        document.getElementById("inc").onclick = function(){
+             document.getElementById("para").style.fontSize = counter+"px"
+             counter++;
+             cosole.log(counter+"px")
+
+
+        }
+       
+        document.getElementById("dec").onclick = function(){
+             document.getElementById("para").style.fontSize = counter+"px"
+             counter--;
+             cosole.log(counter+"px")
+        }
+document.getElementById("color").oninput = function(){
+   let color= document.getElementById("color").value;
+   
+    document.getElementById("mybox").style.backgroundColor = color
+}  
+
+
+    </script>-->
+    <script>
+document.getElementById("box1").oninput = function(){
+    let box1 = document.getElementById("box1").value;
+    console.log(box1)
+    document.getElementById("box2").innerText = box1
+}
+    </script>
+</body>
+</html>
